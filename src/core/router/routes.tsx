@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductListPage from '@/modules/product/pages/ProductListPage'
-import ProductPage from '@/modules/product/pages/ProductPage'
-import HomePage from '@/modules/home//HomePage'
+import ProductPage from '@/modules/product/ProductPage'
+import HomePage from '@/modules/home/HomePage'
+import TopNavBar from '@/core/components/layout/TopNavBar'
 
 export const AppRouter = () => {
   return (
     <BrowserRouter>
+      <TopNavBar/>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<ProductListPage />} />
-        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/product/:id' element={<ProductPage />} />
       </Routes>
     </BrowserRouter>
   )

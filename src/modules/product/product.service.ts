@@ -1,8 +1,8 @@
 
-export const fetchPassportsAPI = async () => {
+export const fetchPassportsAPI = async (id: string) => {
     try {
         const response = await fetch(
-            'https://api-vera.susi.spherity.dev/credential-registry/did:web:api-rcs.susi.spherity.dev:did-registry:acme-power-drive-x-1000-3985-cb-1739186-d-8-d'
+            `https://api-vera.susi.spherity.dev/credential-registry/${id}`
         )
         if (!response.ok) throw new Error('Failed to fetch passports')
         return await response.json()
