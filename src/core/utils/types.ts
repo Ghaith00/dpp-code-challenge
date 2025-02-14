@@ -1,23 +1,14 @@
-import { dataFieldMap } from './constants'
+import { IconKey } from '@/core/components/ui/Icon'
+import { dataFieldMap, GraphicalTypeEnum } from './constants'
 
-export enum GraphicalTypeEnum {
-    Panel = 'Panel',
-    Boolean = 'Boolean',
-    NoRender = 'NoRender',
-    Graph = 'Graph',
-    Number = 'Number',
-    Text = 'Text',
-    Date = 'Date',
-    File = 'File',
-    FileReport = 'FileReport',
-    URL = 'URL'
-}
+export const dataFieldMapTyped = dataFieldMap as DataFieldMapType
 
 export interface DataFieldType {
     title: string
     type: GraphicalTypeEnum
     layout?: {
-        colSpan: string | number
+        colSpan?: string | number
+        icon?: IconKey
     } 
 }
 
@@ -26,3 +17,5 @@ export interface DataFieldMapType {
 }
 
 export type KeyDataField =  keyof typeof dataFieldMap
+export { GraphicalTypeEnum }
+

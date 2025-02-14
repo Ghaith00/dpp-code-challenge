@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export type Data = string | number | Date | boolean | PerformanceMetrics | SafetyDurabilityTests | CTScans | BatteryCellHomologation | TemperatureToleranceTests | MaterialFile[] | BatteryCellScan
+export type Data = string | number | Date | boolean | PerformanceMetrics | SafetyDurabilityTests | CTScans | BatteryCellHomologation | TemperatureToleranceTests | MaterialFile[] | BatteryCellScan | CellChemistry
 
 export type ProductPassportResponse = RootProductPassport[]
 
