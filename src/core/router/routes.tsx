@@ -4,13 +4,15 @@ import HomePage from '@/modules/home/HomePage'
 import TopNavBar from '@/core/components/layout/TopNavBar'
 
 export const AppRouter = () => {
-  return (
-    <BrowserRouter>
-      <TopNavBar/>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/product/:id' element={<ProductPage />} />
-      </Routes>
-    </BrowserRouter>
-  )
+	return (
+		<BrowserRouter>
+			<TopNavBar/>
+			<div className='mt-14'>
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route path='/product/:id' element={<ProductPage />} />
+				</Routes>
+			</div>
+		</BrowserRouter>
+	)
 }

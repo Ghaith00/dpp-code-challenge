@@ -1,7 +1,6 @@
 import { ProductPassportResponse } from '@/modules/product/types'
 import { ShieldCheckIcon, InformationCircleIcon, PresentationChartLineIcon } from '@heroicons/react/24/solid'
 import { useSelectedContent } from '@/modules/product/product.store'
-import { useState } from 'react'
 import Button from '@/core/components/ui/Button'
 
 export interface SideBarProps {
@@ -33,12 +32,11 @@ const getMenuData = (id: string, key: 'name' | 'icon') => {
 }
 
 export default function SideBar({ data }: SideBarProps) {
-    const { selected, setSelected } = useSelectedContent()
-    const [expanded, setExpanded] = useState<boolean>(true)
+    const { selected, setSelected, expanded, setExpanded } = useSelectedContent()
 	if (!selected) return <p>No data available</p>
 
     return (
-        <aside className={`h-screen bg-gray-800 text-white p-4 ${expanded ? 'w-100' : 'w-20'}`}>
+        <aside className={`fixed top-14 left-0 h-[calc(100vh-56px)] bg-gray-800 text-white p-4 ${expanded ? 'w-100' : 'w-20'}`}>
             <nav className='h-full flex flex-col'>
                 <div className='pb-2 flex justify-between items-center'>
                     {expanded && <h2 className='overflow-hidden transition-all text-xl font-bold mb-4'>
@@ -47,7 +45,7 @@ export default function SideBar({ data }: SideBarProps) {
                     <Button
                         label={''}
                         iconName={expanded ? 'chevron-left' : 'chevron-right'}
-                        onClick={() => setExpanded((curr) => !curr)}
+                        onClick={() => setExpanded(!expanded)}
                         className='bg-gray-200'
                         variant='secondary'
                     />

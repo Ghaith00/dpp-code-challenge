@@ -14,7 +14,7 @@ export default function BooleanField({ field, value }: BooleanFieldProps) {
                 <Icon name={field.layout?.icon || 'default-icon'} className='w-5 h-5 dark:text-white' />
             </div>
             <div className='flex-1 min-w-0'>
-                <span className='block text-base font-semibold text-gray-900 truncate dark:text-white'>
+                <span className='block text-base font-semibold text-gray-900 truncate dark:text-white whitespace-pre-wrap'>
                     {field.title}
                 </span>
                 <span className='px-2 py-1 text-sm rounded-lg font-medium bg-green-100 text-green-700'>

@@ -23,7 +23,7 @@ export function File({ name, size, url }: FilesProps) {
         <div className='flex items-center justify-center w-10 h-10 mr-3 bg-teal-100 rounded-lg dark:bg-teal-900'>
             <DocumentTextIcon className='w-5 h-5 text-teal-600 lg:w-6 lg:h-6 dark:text-teal-300' />
         </div>
-        <div className='mr-4'>
+        <div className='mr-4 overflow-hidden'>
             <p className='text-sm font-semibold text-gray-900 dark:text-white'>{name}</p>
             <p className='text-sm text-gray-500 dark:text-gray-400'>{url}, {size}</p>
         </div>

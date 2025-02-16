@@ -1,7 +1,7 @@
 
 export default function TopNavBar() { // To do: refactor
     return (
-        <header className='bg-white dark:bg-gray-800 shadow-lg'>
+        <header className='fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-lg z-50'>
             <nav className='container mx-auto px-4 py-4 flex justify-between items-center'>
                 <a href='#' className='text-2xl font-bold text-indigo-800 dark:text-white transition-colors duration-300'>
                     Spherity

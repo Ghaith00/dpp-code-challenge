@@ -30,12 +30,18 @@ export const usePassportStore = create<PassportStore>((set) => ({
 
 type SelectedContentStore = {
   selected: RootProductPassport | null
+  expanded: boolean
   setSelected: (selected: RootProductPassport) => void
+  setExpanded: (value: boolean) => void
 }
 
 export const useSelectedContent = create<SelectedContentStore>((set) => ({
   selected: null,
+  expanded: false,
   setSelected: (selected: RootProductPassport) => {
     set({ selected: selected })
   },
+  setExpanded: (value: boolean) => {
+    set({ expanded:  value })
+  }
 }))

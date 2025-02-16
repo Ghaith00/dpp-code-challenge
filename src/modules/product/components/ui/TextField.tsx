@@ -19,10 +19,10 @@ export default function TextField({ field, value }: TextFieldProps) {
                 </div>
             }
             <div className='flex-1 min-w-0'>
-                <span className='block text-base font-semibold text-gray-900 truncate dark:text-white'>
+                <span className='block text-base font-semibold text-gray-900 truncate dark:text-white whitespace-pre-wrap'>
                     {field.title}
                 </span>
-                <span className='block text-sm font-normal text-gray-500 truncate dark:text-gray-400'>
+                <span className='block text-sm font-normal text-gray-500 truncate dark:text-gray-400 whitespace-pre-wrap'>
                     {value}
                 </span>
             </div>

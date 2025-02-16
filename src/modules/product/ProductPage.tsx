@@ -8,7 +8,7 @@ export default function ProductPage() {
     const { id } = useParams()
 	
 	const { passport, loading, error, fetchPassport } = usePassportStore()
-	const { selected, setSelected} = useSelectedContent()
+	const { selected, setSelected, expanded } = useSelectedContent()
 
 	useEffect(() => {
 		fetchPassport(id).then((data) => data && setSelected(data[0]))
@@ -25,7 +25,7 @@ export default function ProductPage() {
             <SideBar data={passport} />
 
             {/* Main Content */}
-            <div className='flex-1 p-6'>
+            <div className={`flex-1 transition-all p-6 ${expanded ? 'ml-100' : 'ml-20'} w-full`}>
                 <nav className='flex mb-5' aria-label='Breadcrumb'>
                     <ol className='inline-flex items-center space-x-1 text-sm font-medium md:space-x-2'>
                         <li className='inline-flex items-center'>
