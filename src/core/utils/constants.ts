@@ -23,7 +23,7 @@ export const dataFieldMap  = {
     PPAP: { title: 'Production Part Approval Process', type: GraphicalTypeEnum.Panel, layout: { colSpan: 1 } },
     QAConfirmed: { title: 'QA Confirmed', type: GraphicalTypeEnum.Boolean, layout: { icon: 'check' } },
     approvalDate: { title: 'Approval Date', type: GraphicalTypeEnum.Date, layout: { icon: 'calendar-days' } },
-    CTScans: { title: 'CT Scans', type: GraphicalTypeEnum.Panel, layout: { colSpan: 4 } },
+    CTScans: { title: 'CT Scans', type: GraphicalTypeEnum.Panel, layout: { colSpan: 3 } },
     impurities: { title: 'Impurities', type: GraphicalTypeEnum.Text, layout: { icon: 'exclamation-circle' } },
     anodeOverhang: { title: 'Anode Overhang', type: GraphicalTypeEnum.Text, layout: { icon: 'minus-circle' } },
     batteryCellScan: { title: 'Battery Cell Scan', type: GraphicalTypeEnum.FileReport },
@@ -79,3 +79,10 @@ export const dataFieldMap  = {
     manufacturerIdentification: { title: 'Manufacturer Identification', type: GraphicalTypeEnum.Text, layout: { icon: 'fingerprint'} },
     exhaustionCapacityThreshold: { title: 'Exhaustion Capacity Threshold', type: GraphicalTypeEnum.Number, layout: { icon: 'battery-error' } },
 } as const
+
+export const LG_COL_SPAN = {
+    1: 'lg:col-span-1',
+    2: 'lg:col-span-2',
+    3: 'lg:col-span-3',
+    4: 'lg:col-span-4',
+}

@@ -11,7 +11,7 @@ export interface ContentProps {
 export default function Content({ data }: ContentProps) {
 
     return (
-        <div className='grid gap-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 grid-cols-1'>
+        <div className='grid gap-2 grid-cols-4'>
             <Section data={data} />
         </div>
     )

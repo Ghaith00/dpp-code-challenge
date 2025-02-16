@@ -13,7 +13,7 @@ export function getDPPData (key: string) : DataFieldType {
     return { title: 'Not supported data key', type: GraphicalTypeEnum.NoRender }
 }
 
-export const chunkArray = (arr: number[], size: number) => {
+export function chunkArray (arr: number[], size: number) {
     return arr.reduce((acc, _, i) => {
       if (i % size === 0) acc.push(arr.slice(i, i + size))
       return acc

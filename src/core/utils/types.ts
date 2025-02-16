@@ -7,7 +7,7 @@ export interface DataFieldType {
     title: string
     type: GraphicalTypeEnum
     layout?: {
-        colSpan?: string | number
+        colSpan?: 1 | 2 | 3 | 4
         icon?: IconKey
     } 
 }
