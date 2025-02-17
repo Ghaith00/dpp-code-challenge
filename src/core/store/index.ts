@@ -7,7 +7,7 @@ type DarkModeStore = {
 }
 
 export const useDarkMode = create<DarkModeStore>((set) => ({
-    isDarkMode: false,
+    isDarkMode: true,
     setDarkMode: (value: boolean) => {
         set({ isDarkMode:  value })
     }
