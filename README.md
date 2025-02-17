@@ -93,7 +93,6 @@ To deploy on **Vercel**:
 npm run build
 vercel deploy
 ```
-```
 
 ---
 
