@@ -1,50 +1,112 @@
-# React + TypeScript + Vite
+# 📌 Digital Product Passport - Front-End Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Overview
+This project is a **Digital Product Passport** application that fetches and displays real-time data from an **API** containing verifiable credentials for a car battery. The goal is to **dynamically process and present** the data in an interactive and user-friendly manner.
 
-Currently, two official plugins are available:
+[Demo Link](https://dpp-code-challenge-six.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🔹 API Integration & Data Handling
+- Fetches **real-time** data from the **Digital Product Passport API**.
+- Implements **error handling** for network issues and API failures.
+- Processes and structures the data for an optimized UI. 🚧
 
-- Configure the top-level `parserOptions` property like this:
+### 🔹 Interactive UI & Components
+- **Sidebar Navigation** 🏠 - Allows users to navigate different sections.
+- **Dark Mode** 🌙 - Toggle between **light** and **dark themes** dynamically.
+- **Expandable Sections** 📂 - Users can view detailed product specifications interactively. 🚧
+- **Filter & Search** 🔍 - Enables searching and filtering through data. 🚧
+- **Charts & Tables** 📊 - Data is represented visually using **Recharts & Tailwind-styled tables**.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 🔹 Fully Responsive Design
+- Optimized for **mobile, tablet, and desktop**.
+- Uses **TailwindCSS** for a modern, clean UI.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React.js** | Frontend framework |
+| **Vite.js** | Fast development server |
+| **TailwindCSS** | Styling framework |
+| **Recharts** | Interactive charts & data visualization |
+| **TypeScript** | Static typing & maintainability |
+
+---
+
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/Ghaith00/dpp-code-challenge.git
+cd dpp-code-challenge
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2️⃣ Install Dependencies
+```sh
+npm install
 ```
+
+### 3️⃣ Start the Development Server
+```sh
+npm run dev
+```
+Your app should now be running at `http://localhost:5173/` (default Vite port).
+
+---
+
+## 📂 Project Structure
+```
+src
+ ┣ 📂 core              # Shared code
+ │  ┣ 📂 components     # Reusable UI components (Sidebar, Topbar, Tables, etc.)
+ │  ┣ 📂 router         # Application routing
+ │  ┣ 📂 store          # Global state management
+ │  ┗ 📂 utils          # Utility functions
+ ┣ 📂 modules           # Business logic organized by feature
+ │  ┣ 📂 Home          # Home page (services, store, tests, components, page)
+ │  ┣ 📂 Product       # Product details (services, components, store, etc.)
+ ┗ 📜 main.tsx         # App entry point
+```
+
+---
+
+## 🔧 Configuration & Customization
+
+### 🔹 Changing API Endpoint 🚧 not implemented 🚧
+Modify `VITE_API_URL` in the `.env` file to point to a different API.
+
+### 🔹 Customizing UI
+Modify **TailwindCSS classes** in `src/core/components/` to style the UI differently.
+
+
+---
+
+## 📡 Deployment
+To deploy on **Vercel**:
+```sh
+npm run build
+vercel deploy
+```
+```
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author & Contact
+👤 **Your Ghaith Tabib**  
+🔗 **GitHub:** [Ghaith00](https://github.com/Ghaith00)  
+
+---
+
+### 🎉 Enjoy building your Digital Product Passport! 🚀
+
