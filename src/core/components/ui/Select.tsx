@@ -26,7 +26,7 @@ export default function Select({
     return (
         <div className={`relative ${className}`}>
             <select
-                className='appearance-none w-full px-4 py-2 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500'
+                className='appearance-none w-full px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500'
                 value={defaultValue}
                 onChange={(e) => onChange(e.target.value)}
             >

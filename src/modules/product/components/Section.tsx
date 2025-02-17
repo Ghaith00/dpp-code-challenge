@@ -63,7 +63,7 @@ export default function Section({ data }: { data: CredentialSubject }) {
     return <>
         { fieldKeys.scalarValueKeys.length > 0 &&
             <PanelContainer
-                field={{ title: 'Product Details', type: GraphicalTypeEnum.NoRender, layout: { colSpan: 4 }}}
+                field={{ title: 'Details', type: GraphicalTypeEnum.NoRender, layout: { colSpan: 4 }}}
                 className='grid gap-6 lg:grid-cols-3 grid-cols-1'
             >
                 { fieldKeys.scalarValueKeys

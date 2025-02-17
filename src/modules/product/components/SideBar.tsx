@@ -36,7 +36,11 @@ export default function SideBar({ data }: SideBarProps) {
 	if (!selected) return <p>No data available</p>
 
     return (
-        <aside className={`fixed top-14 left-0 h-[calc(100vh-56px)] bg-gray-800 text-white p-4 ${expanded ? 'w-100' : 'w-20'}`}>
+        <aside className={`
+            fixed top-14 left-0 h-[calc(100vh-56px)]
+            dark:bg-gray-800 dark:text-white p-4 border dark:border-gray-700 border-gray-200
+            ${expanded ? 'w-100' : 'w-20'}
+        `}>
             <nav className='h-full flex flex-col'>
                 <div className='pb-2 flex justify-between items-center'>
                     {expanded && <h2 className='overflow-hidden transition-all text-xl font-bold mb-4'>
@@ -46,7 +50,7 @@ export default function SideBar({ data }: SideBarProps) {
                         label={''}
                         iconName={expanded ? 'chevron-left' : 'chevron-right'}
                         onClick={() => setExpanded(!expanded)}
-                        className='bg-gray-200'
+                        className='bg-gray-200 rounded-lg'
                         variant='secondary'
                     />
                 </div>
@@ -55,7 +59,7 @@ export default function SideBar({ data }: SideBarProps) {
                         <li
                             key={item.id}
                             className={`flex items-center gap-2 p-2 cursor-pointer rounded-lg ${
-                                selected.id === item.id ? 'bg-gray-700' : ''
+                                selected.id === item.id ? 'dark:bg-gray-700 bg-gray-200' : ''
                             }`}
                             onClick={() => setSelected(item)}
                         >

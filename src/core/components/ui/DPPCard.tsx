@@ -7,7 +7,7 @@ export interface CardProps {
 
 export default function DPPCard({ linkProduct, name, description }: CardProps) {
     return (
-        <div className='max-w-2xl bg-gray-600 shadow-lg rounded-lg px-6 py-5'>
+        <div className='max-w-2xl dark:bg-gray-600 rounded-lg px-6 py-5 border dark:border-gray-700 border-gray-200'>
             <div className='flex items-start'>
                 <svg className='fill-current flex-shrink-0 mr-5' width='30' height='30' viewBox='0 0 30 30'>
                     <path className='text-indigo-300' d='m16 14.883 14-7L14.447.106a1 1 0 0 0-.895 0L0 6.883l16 8Z' />
@@ -16,12 +16,12 @@ export default function DPPCard({ linkProduct, name, description }: CardProps) {
                 </svg>
                 <div className='flex-grow truncate'>
                     <div className='w-full sm:flex justify-between items-center mb-3'>
-                        <h2 className='text-2xl leading-snug font-extrabold text-gray-50 truncate mb-1 sm:mb-0'>
+                        <h2 className='text-2xl leading-snug font-extrabold dark:text-gray-50 text-gray-700  truncate mb-1 sm:mb-0'>
                             {name}
                         </h2>
                     </div>
                     <div className='flex items-end justify-between whitespace-normal'>
-                        <div className='max-w-md text-indigo-100'>
+                        <div className='max-w-md dark:text-indigo-100 text-gray-600 '>
                             <p className='mb-2'>
                                 {description}
                             </p>

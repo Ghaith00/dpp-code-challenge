@@ -7,7 +7,7 @@ import {
     Battery50Icon, Battery0Icon, Battery100Icon, BoltSlashIcon,
     ArrowPathIcon, FireIcon, CpuChipIcon, GlobeAltIcon, FingerPrintIcon,
     TableCellsIcon, ChartPieIcon, ChevronDownIcon,ChevronLeftIcon,
-    ChevronRightIcon,
+    ChevronRightIcon, MoonIcon, SunIcon
 } from '@heroicons/react/24/outline'
 
 // Need to add the heroicons icon to the dynamic mapping @/core/utils/constants
@@ -48,6 +48,8 @@ const iconMap = {
     'chevron-down': ChevronDownIcon,
     'chevron-left': ChevronLeftIcon,
     'chevron-right': ChevronRightIcon,
+    'moon': MoonIcon,
+    'sun': SunIcon,
     'battery-error': () => <svg className='w-5 h-5 dark:text-white' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path fill='currentColor' d='M7 22V4h3V2h4v2h3v8.7q-.55.15-1.05.388t-.95.562V6H9v14h3.7q.125.55.363 1.05t.562.95zm9.4 0L15 20.6l2.1-2.1l-2.1-2.1l1.4-1.4l2.1 2.1l2.1-2.1l1.4 1.4l-2.075 2.1L22 20.6L20.6 22l-2.1-2.075z'/></svg>,
     'road': () => <svg className='w-5 h-5 dark:text-white' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path fill='currentColor' d='M10.5 19q-.625 0-1.062-.062T9 18.5q0-.425.438-.712T10.5 17.5t1.063.288t.437.712q0 .375-.437.438T10.5 19m8 2q-.625 0-1.062-.062T17 20.5q0-.425.438-.712T18.5 19.5t1.063.288t.437.712q0 .375-.437.438T18.5 21m-5 0q-.625 0-1.062-.062T12 20.5q0-.425.438-.712T13.5 19.5t1.063.288t.437.712q0 .375-.437.438T13.5 21m-8 0q-.625 0-1.062-.062T4 20.5q0-.425.438-.712T5.5 19.5t1.063.288T7 20.5q0 .375-.437.438T5.5 21m4 1q-.625 0-1.062-.062T8 21.5q0-.425.438-.712T9.5 20.5t1.063.288t.437.712q0 .375-.437.438T9.5 22M6 16v1q0 .425-.288.713T5 18H4q-.425 0-.712-.288T3 17V9l2.1-6q.15-.45.538-.725T6.5 2h11q.475 0 .863.275T18.9 3L21 9v8q0 .425-.287.713T20 18h-1q-.425 0-.712-.288T18 17v-1zm-.2-9h12.4l-1.05-3H6.85zm1.7 6q.625 0 1.063-.437T9 11.5t-.437-1.062T7.5 10t-1.062.438T6 11.5t.438 1.063T7.5 13m9 0q.625 0 1.063-.437T18 11.5t-.437-1.062T16.5 10t-1.062.438T15 11.5t.438 1.063T16.5 13'/></svg>,
     'co2': () => <svg className='w-5 h-5 dark:text-white' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path fill='currentColor' d='M10 15V9h5v6zm1.5-1.5h2v-3h-2zM3 15V9h5v2H6.5v-.5h-2v3h2V13H8v2zm14 3v-3.5h3v-1h-3V12h4.5v3.5h-3v1h3V18z'/></svg>,
